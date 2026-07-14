@@ -11,7 +11,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: "https://rolexpenel.win/", // React app
+    origin: "https://rolexpenel.win", // React app
     credentials: true,
   }),
 );
