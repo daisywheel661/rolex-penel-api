@@ -16,7 +16,15 @@ app.use(
   }),
 );
 app.use(express.json());
-
+// Health Check Route
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Rolex Panel API is running",
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || "development",
+  });
+});
 app.use("/api/auth", require("./routes/auth"));
 
 const PORT = process.env.PORT || 5000;
