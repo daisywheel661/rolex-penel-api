@@ -11,7 +11,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // React app
+    origin: "https://rolexpenel.win/", // React app
     credentials: true,
   }),
 );
